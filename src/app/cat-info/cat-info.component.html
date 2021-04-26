@@ -1,0 +1,34 @@
+<section class="cat-info" *ngIf="cat; else elseBlock">
+  <h1 class="cat-info__name">{{cat.name}}</h1>
+  <p class="cat-info__desc">{{cat.description}}</p>
+  <p class="cat-info__desc">Following are the important characteristic:</p>
+
+  <div class="cat-info__grid">
+    <div class="cat-info__cell">Adaptability</div><div class="cat-info__cell" [innerHTML]="cat.adaptability | catRating"></div>
+    <div class="cat-info__cell">Affection Level</div><div class="cat-info__cell" [innerHTML]="cat.affection_level | catRating"></div>
+    <div class="cat-info__cell">Child Friendly</div><div class="cat-info__cell" [innerHTML]="cat.child_friendly | catRating"></div>
+    <div class="cat-info__cell">Cat Friendly</div><div class="cat-info__cell" [innerHTML]="cat.cat_friendly | catRating"></div>
+    <div class="cat-info__cell">Dog Friendly</div><div class="cat-info__cell" [innerHTML]="cat.dog_friendly | catRating"></div>
+    <div class="cat-info__cell">Stranger Friendly</div><div class="cat-info__cell" [innerHTML]="cat.stranger_friendly | catRating"></div>
+    <div class="cat-info__cell">Energy Level</div><div class="cat-info__cell" [innerHTML]="cat.energy_level | catRating"></div>
+    <div class="cat-info__cell">Temperament</div><div class="cat-info__cell">{{cat.temperament}}</div>
+    <div class="cat-info__cell">Intelligence</div><div class="cat-info__cell" [innerHTML]="cat.intelligence | catRating"></div>
+    <div class="cat-info__cell">Life Span</div><div class="cat-info__cell">{{cat.life_span}} years</div>
+  </div>
+
+  <div class="cat-info__links">
+    <p class="cat-info__desc">Important links:</p>
+    <a class="cat-info__link" *ngIf="cat.wikipedia_url" [href]="cat.wikipedia_url" title="Wikipedia link">
+      <i class="fab fa-wikipedia-w"></i>
+    </a>
+    <a class="cat-info__link" *ngIf="cat.vetstreet_url" [href]="cat.vetstreet_url" title="Vetstreet link">
+      <i class="fas fa-user-md"></i>
+    </a>
+    <a class="cat-info__link" *ngIf="cat.vcahospitals_url" [href]="cat.vcahospitals_url" title="VCA Hospital link">
+      <i class="fas fa-hospital-alt"></i>
+    </a>
+  </div>
+</section>
+<ng-template #elseBlock>
+  <p>No Information Available for the "{{breedId}}" breed. <i class="fas fa-cat"></i></p>
+</ng-template>

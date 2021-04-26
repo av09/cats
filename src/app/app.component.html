@@ -1,0 +1,19 @@
+<header class="header">
+  <section class="header__inner">
+    <a class="header__logo" [routerLink]="['/']">
+      <i class="fas fa-cat"></i>
+    </a>
+  </section>
+</header>
+
+<section class="content">
+  <article class="content__info">
+    <img class="content__image" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRVHNLuqnK_OExc1tkbKg6HpPhlINGL2MaiMA&usqp=CAU" alt="Cat Image">
+    <p class="content__desc">Dear visitor, {{ title }} come in different sizes and colors, we here are trying to take a deep look at this species of mammal one breed at a time! Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+  </article>
+  <router-outlet></router-outlet>
+</section>
+
+<footer>
+  <p class="footer__desc">Visit us at https://catsofallbreeds.com</p>
+</footer>

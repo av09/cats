@@ -1,0 +1,29 @@
+@import '../../assets/styles/variables';
+
+.cat-info__name {
+  text-align: center;
+  font-weight: normal;
+  border-bottom: 1px solid $grey-light;
+  padding-bottom: 10px;
+  margin-top: 40px;
+}
+
+.cat-info__grid {
+  display: grid;
+  grid-template-columns: auto auto;
+  border: 1px solid $grey-light;
+}
+.cat-info__cell {
+  border: 1px solid $grey-light;
+  padding: 5px;
+  text-align: center;
+}
+
+.cat-info__links {
+  display: flex;
+  align-items: center;
+}
+
+.cat-info__link {
+  margin-left: 15px;
+}

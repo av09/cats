@@ -1,0 +1,11 @@
+<section class="list">
+  <h1 class="list__title">Take your pick!</h1>
+  <section class="list__container">
+    <article class="list__item" *ngFor="let cat of cats">
+      <a class="item" [title]="cat.name + ' details'" [routerLink]="['/breed', cat.id]">
+        <img class="item__image" [src]="cat.image?.url" [alt]="cat.name">
+        <p class="item__name">{{ cat.name }}</p>
+      </a>
+    </article>
+  </section>
+</section>

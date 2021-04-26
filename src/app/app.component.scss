@@ -1,0 +1,59 @@
+@import '../assets/styles/variables';
+
+header {
+  display: flex;
+  padding: 10px 0;
+  margin-bottom: 20px;
+  border-bottom: 1px solid $grey-light;
+}
+
+.header__logo {
+  font-size: 40px;
+}
+
+.header__inner,
+.content {
+  width: 1280px;
+  margin: 0 auto;
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
+
+  @media screen and (max-width: 1280px) {
+    width: 90%;
+  }
+}
+
+.content__info {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  background-color: $grey-lighter;
+  padding: 15px;
+}
+
+.content__image {
+  max-width: 100%;
+}
+
+.content__desc {
+  flex-basis: 50%;
+  padding-left: 15px;
+  text-align: justify;
+  margin: 0;
+
+  @media screen and (max-width: 1024px) {
+    flex-basis: auto;
+    padding-left: 0;
+    margin-top: 10px;
+  }
+}
+
+footer {
+  text-align: center;
+  font-size: 12px;
+  border-top: 1px solid $grey-light;
+  margin-top: 20px;
+}
